@@ -17,6 +17,7 @@ export default {
       const html = quill.root.innerHTML
       this.$emit('input', html)
     })
+    this.$emit('quillReady', quill)
   }
 }
 </script>
