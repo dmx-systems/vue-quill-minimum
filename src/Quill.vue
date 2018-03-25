@@ -5,8 +5,7 @@
 <script>
 import Quill from 'quill'
 
-var cssReady            // a promise resolved once CSS is loaded
-var emitted = false     // tracks if "quill-imported" event emitted already
+var cssReady    // a promise resolved once CSS is loaded
 
 export default {
 
@@ -14,15 +13,15 @@ export default {
 
   created () {
     // DM5 Webclient TODO: why is this component sometimes instantiated in detail panel "info" mode?
-    // console.log('quill created', emitted, this.$store.state.details.mode)
-    cssReady = this.loadCSS()
-    if (!emitted) {
+    // console.log('quill created', cssReady, this.$store.state.details.mode)
+    if (!cssReady) {
+      cssReady = this.loadCSS()
       this.$emit('quill-imported', Quill)
-      emitted = true
     }
   },
 
   mounted () {
+    // console.log('quill mounted')
     cssReady && cssReady.then(() => {
       const quill = new Quill(this.$refs.container, this.options)
       quill.pasteHTML(this.value)
