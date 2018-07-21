@@ -5,7 +5,7 @@
 <script>
 import Quill from 'quill'
 
-console.log('Loading Quill')
+console.log('Vue Quill Minimum 2018/07/21')
 
 var init    // boolean
 
