@@ -5,7 +5,9 @@
 <script>
 import Quill from 'quill'
 
-var cssReady    // a promise resolved once CSS is loaded
+console.log('Loading Quill')
+
+var init    // boolean
 
 export default {
 
@@ -13,33 +15,33 @@ export default {
 
   created () {
     // DM5 Webclient TODO: why is this component sometimes instantiated in detail panel "info" mode?
-    // console.log('quill created', cssReady, this.$store.state.details.mode)
-    if (!cssReady) {
-      cssReady = this.loadCSS()
+    // console.log('quill created', init, this.$store.state.details.mode)
+    if (!init) {
+      this.loadCSS()
       this.$emit('quill-imported', Quill)
+      init = true
     }
   },
 
   mounted () {
     // console.log('quill mounted')
-    cssReady && cssReady.then(() => {
-      const quill = new Quill(this.$refs.container, this.options)
-      quill.pasteHTML(this.value)
-      quill.on('text-change', () => {
-        const html = quill.root.innerHTML
-        this.$emit('input', html)
-      })
-      this.$emit('quill-ready', quill)
+    const quill = new Quill(this.$refs.container, this.options)
+    quill.pasteHTML(this.value)
+    quill.on('text-change', () => {
+      const html = quill.root.innerHTML
+      this.$emit('input', html)
     })
+    this.$emit('quill-ready', quill)
   },
 
   methods: {
+    // TODO: split CSS chunk? At the moment quill.core.css is contained twice in the CSS chunk.
     loadCSS () {
       const theme = this.options.theme
       if (theme === 'snow') {
-        return import('quill/dist/quill.snow.css'   /* webpackChunkName: "quill-snow" */)
+        require('quill/dist/quill.snow.css')
       } else if (theme === 'bubble') {
-        return import('quill/dist/quill.bubble.css' /* webpackChunkName: "quill-bubble" */)
+        require('quill/dist/quill.bubble.css')
       } else {
         // TODO: custom themes
         throw Error(`"${theme}" is an unexpected Quill theme`)
