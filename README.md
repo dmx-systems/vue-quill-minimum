@@ -4,6 +4,11 @@ A minimum vue quill component.
 
 ## Version History
 
+**1.3** -- Jul 31, 2018
+
+* Webpack build: support for CSS extraction
+* Add GitLab CI/CD
+
 **1.2** -- Mar 25, 2018
 
 * The `vue-quill-minimum` component can be loaded asynchronously. That is the host application loads the `quill` package only when needed.
@@ -19,4 +24,4 @@ A minimum vue quill component.
 
 ------------
 Jörg Richter  
-Mar 25, 2018
+Jul 31, 2018
