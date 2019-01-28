@@ -3,7 +3,7 @@
   "version": "1.3.0",
   "description": "A minimal Vue.js wrapper component for the Quill editor",
   "author": "Jörg Richter",
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "main": "src/Quill.vue",
   "repository": {
     "type": "git",
