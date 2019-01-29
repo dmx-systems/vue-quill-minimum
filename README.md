@@ -4,6 +4,10 @@ A minimum vue quill component.
 
 ## Version History
 
+**1.4** -- Jan 29, 2019
+
+* Change license to `GPL-3.0-or-later`
+
 **1.3** -- Jul 31, 2018
 
 * Webpack build: support for CSS extraction
@@ -24,4 +28,4 @@ A minimum vue quill component.
 
 ------------
 Jörg Richter  
-Jul 31, 2018
+Jan 29, 2019
