@@ -17,8 +17,7 @@ A minimum vue quill component.
 
 * The `vue-quill-minimum` component can be loaded asynchronously. That is the host application loads the `quill` package only when needed.
     * A new `quill-imported` event gives the host application access to the `Quill` constructor function (e.g. to register extensions) without depending on the `quill` package. This allows Webpack to split the Quill code from the host application's code.
-* Support for Quill's `bubble` theme
-    * Depending on the selected theme only the required CSS is loaded
+* Fix: CSS for both standard themes (`snow` and `bubble`) is loaded
 
 **1.1** -- Sep 7, 2017
 

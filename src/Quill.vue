@@ -4,10 +4,10 @@
 
 <script>
 import Quill from 'quill'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
-console.log('Vue Quill Minimum 2018/07/21')
-
-var init    // boolean
+let init    // boolean
 
 export default {
 
@@ -17,7 +17,6 @@ export default {
     // DM5 Webclient TODO: why is this component sometimes instantiated in detail panel "info" mode?
     // console.log('quill created', init, this.$store.state.details.mode)
     if (!init) {
-      this.loadCSS()
       this.$emit('quill-imported', Quill)
       init = true
     }
@@ -32,21 +31,6 @@ export default {
       this.$emit('input', html)
     })
     this.$emit('quill-ready', quill)
-  },
-
-  methods: {
-    // TODO: split CSS chunk? At the moment quill.core.css is contained twice in the CSS chunk.
-    loadCSS () {
-      const theme = this.options.theme
-      if (theme === 'snow') {
-        require('quill/dist/quill.snow.css')
-      } else if (theme === 'bubble') {
-        require('quill/dist/quill.bubble.css')
-      } else {
-        // TODO: custom themes
-        throw Error(`"${theme}" is an unexpected Quill theme`)
-      }
-    }
   }
 }
 </script>
