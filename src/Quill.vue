@@ -13,6 +13,12 @@ export default {
 
   props: ['value', 'options'],
 
+  data () {
+    return {
+      quill: undefined    // quill instance
+    }
+  },
+
   created () {
     // DM5 Webclient TODO: why is this component sometimes instantiated in detail panel "info" mode?
     // console.log('quill created', init, this.$store.state.details.mode)
@@ -24,13 +30,12 @@ export default {
 
   mounted () {
     // console.log('quill mounted')
-    const quill = new Quill(this.$refs.container, this.options)
-    quill.pasteHTML(this.value)
-    quill.on('text-change', () => {
-      const html = quill.root.innerHTML
-      this.$emit('input', html)
+    this.quill = new Quill(this.$refs.container, this.options)
+    this.quill.pasteHTML(this.value)
+    this.quill.on('text-change', () => {
+      this.$emit('input', this.quill.root.innerHTML)
     })
-    this.$emit('quill-ready', quill)
+    this.$emit('quill-ready', this.quill)
   }
 }
 </script>
