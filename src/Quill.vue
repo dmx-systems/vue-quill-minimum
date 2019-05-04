@@ -31,11 +31,17 @@ export default {
   mounted () {
     // console.log('quill mounted')
     this.quill = new Quill(this.$refs.container, this.options)
-    this.quill.pasteHTML(this.value)
+    this.setHTML(this.value)
     this.quill.on('text-change', () => {
       this.$emit('input', this.quill.root.innerHTML)
     })
     this.$emit('quill-ready', this.quill)
+  },
+
+  methods: {
+    setHTML (html) {
+      this.quill.pasteHTML(html)
+    }
   }
 }
 </script>
