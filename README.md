@@ -4,6 +4,12 @@ A minimum vue quill component.
 
 ## Version History
 
+**1.5** -- May 27, 2019
+
+* Add `setHTML()` component method
+* Make Quill instance available as `quill` component data
+* Refactor CSS loading
+
 **1.4** -- Jan 29, 2019
 
 * Change license to `GPL-3.0-or-later`
@@ -27,4 +33,4 @@ A minimum vue quill component.
 
 ------------
 Jörg Richter  
-Jan 29, 2019
+May 27, 2019
