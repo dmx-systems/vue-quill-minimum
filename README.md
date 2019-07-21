@@ -4,6 +4,10 @@ A minimum vue quill component.
 
 ## Version History
 
+**1.6** -- Jul 22, 2019
+
+* Change license to `AGPL-3.0`
+
 **1.5** -- May 27, 2019
 
 * Add `setHTML()` component method
@@ -33,4 +37,4 @@ A minimum vue quill component.
 
 ------------
 Jörg Richter  
-May 27, 2019
+Jul 22, 2019
