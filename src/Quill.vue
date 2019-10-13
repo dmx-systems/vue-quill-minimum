@@ -40,7 +40,8 @@ export default {
 
   methods: {
     setHTML (html) {
-      this.quill.pasteHTML(html)
+      const delta = this.quill.clipboard.convert(html)
+      this.quill.setContents(delta)
     }
   }
 }

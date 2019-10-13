@@ -31,7 +31,7 @@ A minimum vue quill component.
 
 **1.1** -- Sep 7, 2017
 
-* A new `quill-ready` event gives the host application access to the quill instance, e.g. to register toolbar handlers dynamically.
+* The `quill-ready` event gives the host application access to the quill instance, e.g. to register toolbar handlers dynamically.
 
 **1.0** -- Jun 3, 2017
 
