@@ -39,9 +39,14 @@ export default {
   },
 
   methods: {
+
     setHTML (html) {
       const delta = this.quill.clipboard.convert(html)
       this.quill.setContents(delta)
+    },
+
+    focus () {
+      this.quill.focus()
     }
   }
 }
