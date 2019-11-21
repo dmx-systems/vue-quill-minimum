@@ -4,6 +4,12 @@ A minimum vue quill component.
 
 ## Version History
 
+**1.7** -- Nov 21, 2019
+
+* `setHTML()` method does *not* change focus
+* Add `focus()` component method to set focus manually
+* Update to Quill 1.3.7
+
 **1.6** -- Jul 22, 2019
 
 * Change license to `AGPL-3.0`
@@ -37,4 +43,4 @@ A minimum vue quill component.
 
 ------------
 Jörg Richter  
-Jul 22, 2019
+Nov 21, 2019
