@@ -4,6 +4,10 @@ A minimal [Vue.js](https://vuejs.org) wrapper component for the [Quill](https://
 
 ## Version History
 
+**1.8.1** -- Dec 4, 2019
+
+* Fix: distro file name
+
 **1.8** -- Dec 4, 2019
 
 * Add script to build standalone library
