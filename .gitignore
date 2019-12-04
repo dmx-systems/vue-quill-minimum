@@ -1,3 +1,5 @@
+dist/
 node_modules/
 .DS_Store
+stats.json
 commit-message.txt
