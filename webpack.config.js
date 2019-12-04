@@ -3,7 +3,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 module.exports = {
   entry: './src/Quill.vue',
   output: {
-    filename: 'vue-qill-minimum.min.js',
+    filename: 'vue-quill-minimum.min.js',
     library: 'VueQuillMinimum',
     libraryTarget: 'umd'
   },
