@@ -1,8 +1,12 @@
 # vue-quill-minimum
 
-A minimum vue quill component.
+A minimal [Vue.js](https://vuejs.org) wrapper component for the [Quill](https://quilljs.com) editor.
 
 ## Version History
+
+**1.8** -- Dec 4, 2019
+
+* Add script to build standalone library
 
 **1.7** -- Nov 21, 2019
 
@@ -43,4 +47,4 @@ A minimum vue quill component.
 
 ------------
 Jörg Richter  
-Nov 21, 2019
+Dec 4, 2019

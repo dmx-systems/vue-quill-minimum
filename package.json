@@ -1,10 +1,11 @@
 {
   "name": "vue-quill-minimum",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "A minimal Vue.js wrapper component for the Quill editor",
   "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "AGPL-3.0",
   "main": "src/Quill.vue",
+  "unpkg": "dist/vue-quill-minimum.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jri/vue-quill-minimum.git"
