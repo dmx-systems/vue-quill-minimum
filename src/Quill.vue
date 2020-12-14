@@ -20,7 +20,7 @@ export default {
   },
 
   created () {
-    // DM5 Webclient TODO: why is this component sometimes instantiated in detail panel "info" mode?
+    // DMX Webclient TODO: why is this component sometimes instantiated in detail panel "info" mode?
     // console.log('quill created', init, this.$store.state.details.mode)
     if (!init) {
       this.$emit('quill-imported', Quill)
