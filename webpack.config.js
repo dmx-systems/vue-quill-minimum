@@ -1,4 +1,4 @@
-const { VueLoaderPlugin } = require('vue-loader')
+const {VueLoaderPlugin} = require('vue-loader')
 
 module.exports = {
   entry: './src/Quill.vue',
@@ -23,7 +23,7 @@ module.exports = {
     new VueLoaderPlugin()
   ],
   stats: {
-    entrypoints: false,
+    entrypoints: false
   },
   performance: {
     hints: false
