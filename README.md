@@ -4,6 +4,13 @@ A minimal [Vue.js](https://vuejs.org) wrapper component for the [Quill](https://
 
 ## Version History
 
+**1.8.2** -- Dec 30, 2020
+
+* Chore:
+    * Update "DM5" -> "DMX" in comments
+    * Adapt URLs to `github.com/dmx-systems`
+    * Code run through `eslint`
+
 **1.8.1** -- Dec 4, 2019
 
 * Fix: distro file name
@@ -51,4 +58,4 @@ A minimal [Vue.js](https://vuejs.org) wrapper component for the [Quill](https://
 
 ------------
 Jörg Richter  
-Dec 4, 2019
+Dec 30, 2020
