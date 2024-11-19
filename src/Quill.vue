@@ -41,7 +41,9 @@ export default {
   methods: {
 
     setHTML (html) {
-      const delta = this.quill.clipboard.convert(html)
+      // Note: convert() is internal Quill API.
+      // We want set content w/o changing focus/selection.
+      const delta = this.quill.clipboard.convert({html})
       this.quill.setContents(delta)
     },
 
