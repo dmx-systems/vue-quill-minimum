@@ -14,6 +14,13 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        // Note: quill 2 source code makes use of modern JS and must go through babel.
+        // x(?!y) is Negative Lookahead Assertion regex operator.
+        exclude: /node_modules\/(?!quill)/
+      },
+      {
         test: /\.css$/,
         loader: ['style-loader', 'css-loader']
       }

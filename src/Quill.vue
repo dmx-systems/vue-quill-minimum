@@ -15,7 +15,7 @@ export default {
 
   data () {
     return {
-      quill: undefined    // quill instance
+      quill: undefined      // Quill instance
     }
   },
 
@@ -37,6 +37,9 @@ export default {
     })
     this.$emit('quill-ready', this.quill)
   },
+
+  // Note: we can't use a "value" watcher to synchronize Quill content, by calling setHTML(), as this might fire
+  // an "input" event, causing an endless cycle (at least if app utilizes 2-way bindung through v-model).
 
   methods: {
 
