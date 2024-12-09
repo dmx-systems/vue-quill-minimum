@@ -13,12 +13,6 @@ export default {
 
   props: ['modelValue', 'options'],
 
-  data () {
-    return {
-      quill: undefined      // Quill instance
-    }
-  },
-
   created () {
     // DMX Webclient TODO: why is this component sometimes instantiated in detail panel "info" mode?
     // console.log('quill created', init, this.$store.state.details.mode)
@@ -30,6 +24,7 @@ export default {
 
   mounted () {
     // console.log('quill mounted')
+    // Note: quill instance must be non-reactive state, Quill doesn't work with JS Proxy object
     this.quill = new Quill(this.$refs.container, this.options)
     this.setHTML(this.modelValue)
     this.quill.on('text-change', () => {
