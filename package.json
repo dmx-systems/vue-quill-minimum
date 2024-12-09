@@ -15,6 +15,7 @@
     "stats": "../../node_modules/.bin/webpack -p --json > stats.json && ../../node_modules/.bin/webpack-bundle-analyzer stats.json dist"
   },
   "peerDependencies": {
-    "quill": "2.x"
+    "quill": "2.x",
+    "vue": "3.x"
   }
 }

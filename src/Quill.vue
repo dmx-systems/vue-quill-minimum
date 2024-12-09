@@ -11,7 +11,7 @@ let init    // boolean
 
 export default {
 
-  props: ['value', 'options'],
+  props: ['modelValue', 'options'],
 
   data () {
     return {
@@ -31,9 +31,9 @@ export default {
   mounted () {
     // console.log('quill mounted')
     this.quill = new Quill(this.$refs.container, this.options)
-    this.setHTML(this.value)
+    this.setHTML(this.modelValue)
     this.quill.on('text-change', () => {
-      this.$emit('input', this.quill.root.innerHTML)
+      this.$emit('update:modelValue', this.quill.root.innerHTML)
     })
     this.$emit('quill-ready', this.quill)
   },
