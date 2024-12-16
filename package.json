@@ -1,6 +1,6 @@
 {
   "name": "vue-quill-minimum",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A minimal Vue.js wrapper component for the Quill editor",
   "author": "Jörg Richter <jri@dmx.berlin>",
   "license": "AGPL-3.0",
@@ -11,8 +11,8 @@
     "url": "https://github.com/dmx-systems/vue-quill-minimum.git"
   },
   "scripts": {
-    "build": "../../node_modules/.bin/webpack -p --hide-modules",
-    "stats": "../../node_modules/.bin/webpack -p --json > stats.json && ../../node_modules/.bin/webpack-bundle-analyzer stats.json dist"
+    "build": "npx webpack -p --hide-modules",
+    "stats": "npx webpack -p --json > stats.json && npx webpack-bundle-analyzer stats.json dist"
   },
   "peerDependencies": {
     "quill": "2.x",

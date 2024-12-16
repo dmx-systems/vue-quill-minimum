@@ -4,9 +4,15 @@ A minimal [Vue.js](https://vuejs.org) wrapper component for the [Quill](https://
 
 ## Version History
 
+**3.0** -- Dec 16, 2024
+
+* BREAKING CHANGE
+    * Requires Vue 3 (instead Vue 2)
+
 **2.0** -- Nov 19, 2024
 
-* Requires Quill 2.x
+* BREAKING CHANGE
+    * Requires Quill 2 (instead Quill 1.3.7)
 
 **1.8.2** -- Dec 30, 2020
 
@@ -62,4 +68,4 @@ A minimal [Vue.js](https://vuejs.org) wrapper component for the [Quill](https://
 
 ------------
 Jörg Richter  
-Nov 19, 2024
+Dec 16, 2024
